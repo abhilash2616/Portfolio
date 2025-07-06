@@ -18,18 +18,19 @@ import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
+// ----- Corrected Data -----
 const about = {
   title: "About me",
   description:
     "I am a web developer with a passion for creating beautiful and functional websites.",
   info: [
-    { fieldName: "Name", fielValue: "Abhilash Bera" },
-    { fieldName: "Phone", fielValue: "(+91) 9734341856" },
-    { fieldName: "Email", fielValue: "abhilashbera2003@gmail.com" },
-    { fieldName: "Location", fielValue: "Kolkata, India" },
-    { fieldName: "Experience", fielValue: "1 year" },
-    { fieldName: "Freelance", fielValue: "Available" },
-    { fieldName: "Languages", fielValue: "English, Hindi, Bengali" },
+    { fieldName: "Name", fieldValue: "Abhilash Bera" },
+    { fieldName: "Phone", fieldValue: "(+91) 9734341856" },
+    { fieldName: "Email", fieldValue: "abhilashbera2003@gmail.com" },
+    { fieldName: "Location", fieldValue: "Kolkata, India" },
+    { fieldName: "Experience", fieldValue: "1 year" },
+    { fieldName: "Freelance", fieldValue: "Available" },
+    { fieldName: "Languages", fieldValue: "English, Hindi, Bengali" },
   ],
 };
 
@@ -88,6 +89,7 @@ const skills = {
   ],
 };
 
+// ----- Resume Component -----
 const Resume = () => {
   return (
     <motion.div
@@ -126,7 +128,7 @@ const Resume = () => {
                           {info.fieldName}
                         </span>
                         <span className="text-sm text-white font-medium">
-                          {info.fielValue}
+                          {info.fieldValue}
                         </span>
                       </li>
                     ))}
@@ -217,6 +219,7 @@ const Resume = () => {
   );
 };
 
+// ----- Section Component -----
 const Section = ({ title, description, children }) => (
   <div className="flex flex-col gap-6 text-center lg:text-left">
     <h2 className="text-4xl font-bold text-yellow-500">{title}</h2>
