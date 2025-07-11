@@ -63,20 +63,9 @@ export default function ContactSection() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <Input
-                placeholder="Name"
-                className="placeholder:text-white/50 text-white"
-              />
-              <Input
-                type="email"
-                placeholder="Email"
-                className="placeholder:text-white/50 text-white"
-              />
-              <Input
-                type="tel"
-                placeholder="Phone"
-                className="placeholder:text-white/50 text-white md:col-span-2"
-              />
+              <Input type="name" placeholder="Name" />
+              <Input type="email" placeholder="Email" />
+              <Input type="tel" placeholder="Phone" />
 
               <Select>
                 <SelectTrigger className="text-white">
