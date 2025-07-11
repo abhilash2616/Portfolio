@@ -39,11 +39,10 @@ const Services = () => {
     <section className="min-h-[80vh] flex flex-col justify-center py-12 lg:py-24">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 0.4, duration: 0.6, ease: "easeInOut" },
-          }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.0, ease: "easeIn" }}
+          viewport={{ once: true }}
           className="flex flex-wrap gap-10 justify-center"
         >
           {services.map((service, index) => (
@@ -52,14 +51,17 @@ const Services = () => {
               className="group border border-white/10 rounded-2xl p-6 hover:bg-white/5 transition-all duration-300 backdrop-blur-sm shadow-md"
             >
               <div className="flex items-center justify-between mb-4">
-              <div className="text-4xl sm:text-5xl font-extrabold text-transparent text-outline group-hover:text-outline-hover transition-all duration-300">
-      {service.num}
-    </div>
+                <div className="text-4xl sm:text-5xl font-extrabold text-transparent text-outline group-hover:text-outline-hover transition-all duration-300">
+                  {service.num}
+                </div>
                 <Link
                   href={service.href}
                   className="w-[56px] h-[56px] rounded-full bg-white text-yellow-400 flex items-center justify-center transition-all duration-300 group-hover:bg-yellow-400 group-hover:text-white hover:cursor-pointer hover:-rotate-45 group-hover:rotate-0 group-hover:scale-105"
                 >
-                  <BsArrowDownRight size={22} className="text-2xl transition-all duration-300"/>
+                  <BsArrowDownRight
+                    size={22}
+                    className="text-2xl transition-all duration-300"
+                  />
                 </Link>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-yellow-300 transition-colors">
