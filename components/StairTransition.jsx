@@ -13,7 +13,7 @@ const StairTransition = ({ children }) => {
     setIsMounted(true);
   }, []);
 
-  if (!isMounted) return null; // 🔐 Prevent SSR mismatch
+  if (!isMounted) return null;
 
   return (
     <AnimatePresence mode="wait">

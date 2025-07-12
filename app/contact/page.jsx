@@ -27,7 +27,7 @@ export default function ContactSection() {
     <motion.section
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 2.0, ease: "easeIn" }}
+      transition={{ duration: 0.6, delay: 2.4, ease: "easeIn" }}
       viewport={{ once: true }}
       className="relative py-20 lg:py-28 overflow-hidden"
     >

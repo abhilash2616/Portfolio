@@ -95,7 +95,7 @@ const Resume = () => {
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 1.0, ease: "easeIn" }}
+      transition={{ duration: 0.6, delay: 2.4, ease: "easeIn" }}
       viewport={{ once: true }}
       className="min-h-[80vh] flex items-center justify-center py-12 lg:py-0"
     >

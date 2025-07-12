@@ -17,7 +17,7 @@ const Stats = () => {
           {stats.map((stat) => (
             <div key={stat.id} className="flex-1 flex gap-4 items-center justify-center">
               <h3 className="text-4xl font-extrabold text-[#ffc917]">
-                <CountUp end={stat.value} duration={3} delay={2} />
+                <CountUp end={stat.value} duration={3} delay={2} />+
               </h3>
               <p className={`${stat.title.length > 15 ? "max-w-[100px]" : "max-w-[150px]" } leading-snug text-white/80`}>
                 {stat.title}
