@@ -6,33 +6,34 @@ import { motion } from "framer-motion";
 const services = [
   {
     num: "01",
-    title: "Web Development",
+    title: "Frontend Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo delectus.",
-    href: "/services/web-development",
+      "I build fast, responsive, and modern web interfaces using React.js, Next.js, Tailwind CSS, and JavaScript.",
+    href: "/services/frontend-development",
   },
   {
     num: "02",
     title: "UI Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo delectus.",
+      "I create clean, user-friendly, and accessible interfaces with a focus on pixel-perfect design and smooth user experience.",
     href: "/services/ui-development",
   },
   {
     num: "03",
-    title: "App Development",
+    title: "Shopify & WordPress Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo delectus.",
-    href: "/services/app-development",
+      "I develop custom Shopify stores and WordPress websites tailored to your business needs with clean and scalable code.",
+    href: "/services/shopify-wordpress-development",
   },
   {
     num: "04",
-    title: "Backend Development",
+    title: "Website Optimization",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo delectus.",
-    href: "/services/backend-development",
+      "I optimize websites for speed, SEO, and performance using best practices and modern web tools.",
+    href: "/services/website-optimization",
   },
 ];
+
 
 const Services = () => {
   return (
@@ -43,12 +44,12 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.4, ease: "easeIn" }}
           viewport={{ once: true }}
-          className="flex flex-wrap gap-x-4 gap-y-10 justify-center"
+          className="flex flex-wrap gap-x-1 gap-y-10 md:justify-center justify-center lg:justify-between"
         >
           {services.map((service, index) => (
             <div
               key={index}
-              className="group border border-white/10 rounded-2xl p-6 hover:bg-white/5 transition-all duration-300 backdrop-blur-sm shadow-md"
+              className="w-full lg:w-[48%] group border border-white/10 rounded-2xl p-6 hover:bg-white/5 transition-all duration-300 backdrop-blur-sm shadow-md"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="text-4xl sm:text-5xl font-extrabold text-transparent text-outline group-hover:text-outline-hover transition-all duration-300">
@@ -56,7 +57,7 @@ const Services = () => {
                 </div>
                 <Link
                   href={service.href}
-                  className="w-[56px] h-[56px] rounded-full bg-white text-[#212121] flex items-center justify-center transition-all duration-300 group-hover:bg-yellow-400 group-hover:text-white hover:cursor-pointer hover:-rotate-45 group-hover:rotate-0 group-hover:scale-105"
+                  className="lg:w-[56px] w-[46px] lg:h-[56px] h-[46px] rounded-full bg-white text-[#212121] flex items-center justify-center transition-all duration-300 group-hover:bg-yellow-400 group-hover:text-white hover:cursor-pointer hover:-rotate-45 group-hover:rotate-0 group-hover:scale-105"
                 >
                   <BsArrowDownRight
                     size={22}

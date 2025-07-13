@@ -100,12 +100,12 @@ const Work = () => {
                   </li>
                 ))}
               </ul>
-              <div className="border border-white/20 border-b-2"></div>
+              <div className="border border-white/20 border-b-1"></div>
               <div className="flex gap-2">
                 <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] flex items-center justify-center rounded-full bg-white/10 group transition-all duration-300">
+                      <TooltipTrigger className="w-[60px] h-[60px] flex items-center justify-center rounded-full bg-white/10 group hover:cursor-pointer transition-all duration-300">
                         <BsArrowUpRight className="text-white/80 text-2xl group-hover:text-[#ffc917] transition-all duration-300" />
                       </TooltipTrigger>
                       <TooltipContent>
@@ -117,8 +117,8 @@ const Work = () => {
                 <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] flex items-center justify-center rounded-full bg-white/10 group transition-all duration-300">
-                        <BsGithub className="text-white/80 text-2xl group-hover:text-[#ffc917] transition-all duration-300" />
+                      <TooltipTrigger className="w-[60px] h-[60px] flex items-center justify-center rounded-full bg-white/10 group hover:cursor-pointer transition-all duration-300">
+                        <BsGithub className="text-white/80 text-2xl group-hover:text-[#ffc917]  transition-all duration-300" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Github Repository</p>
@@ -157,7 +157,7 @@ const Work = () => {
                 </SwiperSlide>
               ))}
               <WorkSliderBtns
-                containerStyles="absolute bottom-[calc(50%_-_22px)] lg:bottom-0 right-0 z-10 flex justify-between w-full lg:w-max lg:justify-none"
+                containerStyles="absolute bottom-[calc(50%_-_22px)] lg:bottom-0 right-0 z-10 flex justify-between w-full lg:w-max lg:justify-none gap-4"
                 btnStyles="w-10 h-10 bg-[#ffc917] rounded-full flex items-center justify-center hover:bg-[#ffc917]/80 transition-all duration-300 hover:cursor-pointer"
                 iconStyles="text-black text-2xl"
               />

@@ -22,7 +22,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 const about = {
   title: "About me",
   description:
-    "I am a web developer with a passion for creating beautiful and functional websites.",
+    "I'm a passionate frontend developer with a focus on building clean, responsive, and user-friendly websites. Skilled in React, Tailwind CSS, and modern web tools, I love turning ideas into smooth, interactive digital experiences. I'm always learning and excited to grow in the world of web development.",
   info: [
     { fieldName: "Name", fieldValue: "Abhilash Bera" },
     { fieldName: "Phone", fieldValue: "(+91) 9734341856" },
@@ -37,7 +37,7 @@ const about = {
 const experience = {
   title: "My Experience",
   description:
-    "I am a web developer with a passion for creating beautiful and functional websites.",
+    "I have hands-on experience in building modern, responsive websites using React, Tailwind CSS, and JavaScript. From internship to full-time role at Digital Wolf, I've worked on real-world projects, improved performance, and collaborated with teams to deliver clean, user-focused web solutions.",
   items: [
     {
       position: "Frontend Developer",
@@ -59,7 +59,7 @@ const experience = {
 const education = {
   title: "My Education",
   description:
-    "I am a web developer with a passion for creating beautiful and functional websites.",
+    "I’ve completed a Web Design Pro course from Moople Institute, along with an online Frontend Development course focused on modern tools like React, JavaScript, and Tailwind CSS—blending creative design with hands-on technical skills.",
   items: [
     { degree: "Bachelor of Science", institution: "Asutosh College" },
     { degree: "Higher Secondary", institution: "(WBCHSE)" },
@@ -71,7 +71,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "I am a web developer with a passion for creating beautiful and functional websites.",
+    "I specialize in frontend development with strong skills in HTML, CSS, JavaScript, React.js, Next.js, and Tailwind CSS. I also have experience with Shopify, Bootstrap, WordPress, and version control using Git & GitHub. I focus on building fast, responsive, and scalable web interfaces.",
   skillList: [
     { icon: <FaReact /> },
     { icon: <SiNextdotjs /> },
@@ -223,7 +223,7 @@ const Resume = () => {
 const Section = ({ title, description, children }) => (
   <div className="flex flex-col gap-6 text-center lg:text-left">
     <h2 className="text-4xl font-bold text-yellow-500">{title}</h2>
-    <p className="text-sm text-gray-500 max-w-[600px] mx-auto lg:mx-0">
+    <p className="text-sm text-gray-500 w-full mx-auto lg:mx-0">
       {description}
     </p>
     {children}
