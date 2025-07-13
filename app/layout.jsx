@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import CustomCursor from "@/components/CustomCursor";
+import { ToastContainer } from 'react-toastify';
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -23,6 +25,18 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <StairTransition />
+        <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark" />
+        <CustomCursor />
         <PageTransition>
         {children}
         </PageTransition>

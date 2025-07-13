@@ -4,15 +4,41 @@ import { Button } from "@/components/ui/button";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import { toast } from 'react-toastify';
 
 const Home = () => {
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/assets/resume/Abhilash's CV.pdf";
-    link.download = "Abhilash's CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+
+  const handleDownload = async () => {
+    try {
+      const response = await fetch("/assets/resume/Abhilash's CV.pdf");
+
+      if (!response.ok) {
+        throw new Error("File not found");
+      }
+
+      const link = document.createElement("a");
+      link.href = "/assets/resume/Abhilash's CV.pdf";
+      link.download = "Abhilash's CV.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      toast.success("Resume download started!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } catch (error) {
+      toast.error("Download failed. Try again later.", {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
   };
 
   return (
@@ -20,7 +46,9 @@ const Home = () => {
       <div className="container mx-auto px-4 py-0 lg:py-16">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="order-2 lg:order-none text-center lg:text-left">
-            <span className="text-xl font-bold text-gray-500 pb-4">Frontend Developer</span>
+            <span className="text-xl font-bold text-gray-500 pb-4">
+              Frontend Developer
+            </span>
             <h1 className="text-4xl font-bold mb-3">
               Hello I'm <br />
               <span className="text-[#ffc917] text-6xl">Abhilash Bera</span>

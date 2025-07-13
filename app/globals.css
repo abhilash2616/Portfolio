@@ -121,6 +121,7 @@
   body {
     @apply bg-[#1c1c1c] text-white leading-loose;
     font-family: var(--font-jetbrains-mono);
+    /* cursor: none; */
   }
 
   .text-outline {
@@ -131,3 +132,48 @@
     -webkit-text-stroke: 1px #ffc917;
   }
 }
+
+.custom-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 150ms ease, background-color 250ms ease,
+    box-shadow 300ms ease;
+  animation: cursorPulse 2s infinite ease-in-out;
+  backdrop-filter: blur(4px);
+}
+
+/* Scale up on hover */
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.6);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Click feedback */
+.custom-cursor.click {
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Pulse animation */
+@keyframes cursorPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.25);
+  }
+}
+
+
+

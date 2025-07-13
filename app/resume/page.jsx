@@ -44,14 +44,14 @@ const experience = {
       company: "Digital Wolf",
       date: "March 2025 - Present",
       description:
-        "I am a web developer with a passion for creating beautiful and functional websites.",
+        "Built responsive websites using HTML, CSS, JavaScript, and React. Improved page load times by 20%, ensured cross-browser compatibility, and collaborated with a team to deliver smooth user experiences.",
     },
     {
       position: "Frontend Developer (Internship)",
       company: "Digital Wolf",
       date: "Jan 2025 - March 2025",
       description:
-        "I am a web developer with a passion for creating beautiful and functional websites.",
+        "Assisted in developing responsive web interfaces. Gained hands-on experience with modern frontend tools and contributed to real-world projects.",
     },
   ],
 };
@@ -159,7 +159,7 @@ const Resume = () => {
                           </span>{" "}
                           — {item.date}
                         </p>
-                        <p className="text-sm text-white/90 leading-relaxed">
+                        <p className="text-sm text-gray-400 leading-relaxed">
                           {item.description}
                         </p>
                       </li>

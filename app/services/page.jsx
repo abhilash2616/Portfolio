@@ -43,7 +43,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.4, ease: "easeIn" }}
           viewport={{ once: true }}
-          className="flex flex-wrap gap-10 justify-center"
+          className="flex flex-wrap gap-x-4 gap-y-10 justify-center"
         >
           {services.map((service, index) => (
             <div
@@ -56,7 +56,7 @@ const Services = () => {
                 </div>
                 <Link
                   href={service.href}
-                  className="w-[56px] h-[56px] rounded-full bg-white text-yellow-400 flex items-center justify-center transition-all duration-300 group-hover:bg-yellow-400 group-hover:text-white hover:cursor-pointer hover:-rotate-45 group-hover:rotate-0 group-hover:scale-105"
+                  className="w-[56px] h-[56px] rounded-full bg-white text-[#212121] flex items-center justify-center transition-all duration-300 group-hover:bg-yellow-400 group-hover:text-white hover:cursor-pointer hover:-rotate-45 group-hover:rotate-0 group-hover:scale-105"
                 >
                   <BsArrowDownRight
                     size={22}
