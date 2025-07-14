@@ -8,6 +8,24 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+import {
+  FaReact,
+  FaWordpress,
+  FaHtml5,
+  FaCss3Alt,
+  FaShopify,
+  FaPhp,
+  FaCode,
+  FaArrowRight,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiJavascript,
+  SiElementor,
+  SiWoocommerce,
+} from "react-icons/si";
+
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import {
   Tooltip,
@@ -19,51 +37,83 @@ import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
+// Projects Array
 const projects = [
   {
     id: "01",
-    category: "Web Development",
-    title: "Project 1",
-    description: "Description 1",
+    category: "Next.js Portfolio",
+    title: "Personal Portfolio Website",
+    description:
+      "A sleek and responsive portfolio built with Next.js and Tailwind CSS to showcase my skills, experience, and projects.",
     stack: [
-      { name: "React", icon: "react" },
-      { name: "Next.js", icon: "nextjs" },
-      { name: "Tailwind CSS", icon: "tailwind" },
-      { name: "TypeScript", icon: "typescript" },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
     ],
     image: "/assets/work/thumb1.png",
-    github: "https://github.com/yourusername/project1",
-    live: "https://yourusername.github.io/project1",
+    github: "https://github.com/yourusername/portfolio",
+    live: "https://yourusername.vercel.app",
   },
   {
     id: "02",
-    category: "Web Development",
-    title: "Project 2",
-    description: "Description 2",
+    category: "Shopify Store",
+    title: "Custom Shopify Storefront",
+    description:
+      "Developed and customized a Shopify theme for a fashion brand, including product filtering, cart features, and responsive layout.",
     stack: [
-      { name: "React", icon: "react" },
-      { name: "Next.js", icon: "nextjs" },
-      { name: "Tailwind CSS", icon: "tailwind" },
-      { name: "TypeScript", icon: "typescript" },
+      { name: "Shopify", icon: <FaShopify /> },
+      { name: "Liquid", icon: <FaCode /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
     ],
     image: "/assets/work/thumb2.png",
-    github: "https://github.com/yourusername/project2",
-    live: "https://yourusername.github.io/project2",
+    github: "",
+    live: "https://clientshop.myshopify.com",
   },
   {
     id: "03",
-    category: "Web Development",
-    title: "Project 3",
-    description: "Description 3",
+    category: "WordPress Development",
+    title: "Business Website in WordPress",
+    description:
+      "Created a fully functional business website using WordPress with custom Elementor sections, WooCommerce integration, and SEO-optimized pages.",
     stack: [
-      { name: "React", icon: "react" },
-      { name: "Next.js", icon: "nextjs" },
-      { name: "Tailwind CSS", icon: "tailwind" },
-      { name: "TypeScript", icon: "typescript" },
+      { name: "WordPress", icon: <FaWordpress /> },
+      { name: "PHP", icon: <FaPhp /> },
+      { name: "Elementor", icon: <SiElementor /> },
+      { name: "WooCommerce", icon: <SiWoocommerce /> },
     ],
     image: "/assets/work/thumb3.png",
-    github: "https://github.com/yourusername/project3",
-    live: "https://yourusername.github.io/project3",
+    github: "",
+    live: "https://clientbusinesssite.com",
+  },
+  {
+    id: "04",
+    category: "Responsive Web Design",
+    title: "HTML & CSS Landing Page",
+    description:
+      "Designed a responsive landing page using pure HTML, CSS, and JavaScript with smooth animations and mobile-first design.",
+    stack: [
+      { name: "HTML5", icon: <FaHtml5 /> },
+      { name: "CSS3", icon: <FaCss3Alt /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+    ],
+    image: "/assets/work/thumb4.png",
+    github: "https://github.com/yourusername/html-landing-page",
+    live: "https://yourusername.github.io/html-landing-page",
+  },
+  {
+    id: "05",
+    category: "Web Development",
+    title: "E-Commerce Frontend",
+    description:
+      "Responsive e-commerce frontend with cart, product filtering, and checkout UI built with React and Tailwind CSS.",
+    stack: [
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+    ],
+    image: "/assets/work/thumb5.png",
+    github: "https://github.com/yourusername/ecommerce-ui",
+    live: "https://yourusername.github.io/ecommerce-ui",
   },
 ];
 
@@ -90,42 +140,51 @@ const Work = () => {
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.id}
               </div>
-              <h2 className="text-2xl font-bold">{project.category}</h2>
-              <p className="text-white/80">{project.description}</p>
-              <ul className="flex flex-wrap gap-2">
+              <h2 className="text-2xl font-bold text-[#ffc917]">
+                {project.category}
+              </h2>
+              <p className="text-white/70">{project.description}</p>
+              <ul className="flex flex-wrap gap-4 text-white/80 text-xl">
                 {project.stack.map((item, index) => (
-                  <li key={index} className="text-white/80">
-                    {item.name}
-                    {index !== project.stack.length - 1 && ","}
+                  <li
+                    key={index}
+                    className="flex items-center gap-2 hover:cursor-pointer text-[#ffc917]"
+                  >
+                    {item.icon}
+                    <span className="text-sm text-white">{item.name}</span>
                   </li>
                 ))}
               </ul>
               <div className="border border-white/20 border-b-1"></div>
               <div className="flex gap-2">
-                <Link href={project.live} target="_blank">
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[60px] h-[60px] flex items-center justify-center rounded-full bg-white/10 group hover:cursor-pointer transition-all duration-300">
-                        <BsArrowUpRight className="text-white/80 text-2xl group-hover:text-[#ffc917] transition-all duration-300" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>View Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                <Link href={project.github} target="_blank">
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[60px] h-[60px] flex items-center justify-center rounded-full bg-white/10 group hover:cursor-pointer transition-all duration-300">
-                        <BsGithub className="text-white/80 text-2xl group-hover:text-[#ffc917]  transition-all duration-300" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github Repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.live && (
+                  <Link href={project.live} target="_blank">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[60px] h-[60px] flex items-center justify-center rounded-full bg-white/10 group hover:cursor-pointer transition-all duration-300">
+                          <BsArrowUpRight className="text-white/80 text-2xl group-hover:text-[#ffc917] transition-all duration-300" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>View Project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
+                {project.github && (
+                  <Link href={project.github} target="_blank">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[60px] h-[60px] flex items-center justify-center rounded-full bg-white/10 group hover:cursor-pointer transition-all duration-300">
+                          <BsGithub className="text-white/80 text-2xl group-hover:text-[#ffc917] transition-all duration-300" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>GitHub Repository</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -143,10 +202,7 @@ const Work = () => {
               {projects.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="relative group flex items-center justify-center w-full h-[460px] rounded-xl overflow-hidden">
-                    {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-300 z-10" />
-
-                    {/* Image Layer */}
                     <Image
                       src={item.image}
                       alt={item.title}
