@@ -62,15 +62,7 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 lg:p-14 shadow-2xl space-y-8"
     >
-      <div className="space-y-2">
-        <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-white">
-          Let’s work together
-        </h2>
-        <p className="text-sm text-white/80">
-          Fill in the form and I’ll get back to you within 24 hours.
-        </p>
-      </div>
-
+    
       <div className="grid md:grid-cols-2 gap-6">
         <Input
           name="name"
@@ -106,10 +98,10 @@ const ContactForm = () => {
             <SelectValue placeholder="Select a service" />
           </SelectTrigger>
           <SelectContent className="border-white/10 text-white">
-            <SelectItem value="web-development">Web Development</SelectItem>
-            <SelectItem value="mobile-development">Mobile Development</SelectItem>
-            <SelectItem value="ui-ux-design">UI/UX Design</SelectItem>
-            <SelectItem value="seo-marketing">SEO Marketing</SelectItem>
+            <SelectItem value="frontend-development">Frontend Development</SelectItem>
+            <SelectItem value="ui-development">UI Development</SelectItem>
+            <SelectItem value="shopify-WordPress-development">Shopify & WordPress Development</SelectItem>
+            <SelectItem value="website-optimization">Website Optimization</SelectItem>
           </SelectContent>
         </Select>
       </div>

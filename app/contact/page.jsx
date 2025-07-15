@@ -40,6 +40,14 @@ export default function ContactSection() {
 
         {/* Contact Form */}
         <div className="lg:col-span-2 order-1 lg:order-2">
+          <div className="space-y-2 mb-5">
+            <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-white">
+              Let’s work together
+            </h2>
+            <p className="text-sm text-white/80">
+              Fill in the form and I’ll get back to you within 24 hours.
+            </p>
+          </div>
           <ContactForm />
         </div>
       </div>
